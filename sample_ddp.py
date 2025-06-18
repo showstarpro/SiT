@@ -131,7 +131,7 @@ def main(mode, args):
                     f"cfg-{args.cfg_scale}-{args.per_proc_batch_size}-"\
                     f"{mode}-{args.num_sampling_steps}-{args.sampling_method}-"\
                     f"{args.diffusion_form}-{args.last_step}-{args.last_step_size}"
-    sample_folder_dir = f"/lpai/volumes/jfs-data-lhp-bd-ga/dataset/sit/{args.sample_dir}/{folder_name}"
+    sample_folder_dir = f"/lpai/output/models/sit/{args.sample_dir}/{folder_name}"
     if rank == 0:
         os.makedirs(sample_folder_dir, exist_ok=True)
         print(f"Saving .png samples at {sample_folder_dir}")
